@@ -5,20 +5,24 @@ const form = document.querySelector('form');
 
 let usersArray = [];
 
+
+let allarr = [];
+
+
+
 form.addEventListener('submit',function(e){
     e.preventDefault();
      usersArray.push({
          Email: email.value,
-         Password:password.value,
-         username:username.value,
-     }) 
-    
+         Password: password.value,
+         Username:username.value
+        })         
+        console.log(usersArray)
+        
     
     localStorage.setItem('send', JSON.stringify(usersArray))
-
+    console.log()    
     
-    console.log(usersArray)
 alert('User registered to our website');
 window.location = 'index.html';
-form.reset();
 })
